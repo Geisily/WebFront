@@ -1,77 +1,59 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0; padding: 0;
-  background: #fdfdfd;
-  color: #333;
+    font-family: 'Lora', serif;
+    background-color: #FAFAFA;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  display: flex; justify-content: space-between; align-items: center;
-  background: #fff; padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #A8B5A2;
+    margin-top: 1.5em;
 }
 
-.logo { height: 60px; }
+a {
+    color: #A8B5A2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D4A8A8;
+    text-decoration: underline;
+}
 
 nav ul {
-  list-style: none; display: flex; gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
 }
 
-nav a {
-  text-decoration: none;
-  color: #555;
-  font-weight: bold;
-}
-
-nav a.active, nav a:hover {
-  color: #d96666;
-}
-
-main { padding: 40px 20px; text-align: center; }
-
-.hero {
-  background: url('../images/produto1.jpg') center/cover no-repeat;
-  color: #fff; padding: 100px 20px;
-}
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.galeria img {
-  width: 100%; height: auto; border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form input, form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  background: #d96666;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+nav ul li a {
+    font-weight: bold;
 }
 
 footer {
-  text-align: center;
-  background: #eee;
-  padding: 20px;
-  margin-top: 40px;
+    margin-top: 3em;
+    padding: 1em;
+    text-align: center;
+    font-size: 0.85em;
+    color: #777;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.produtos-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
 }
