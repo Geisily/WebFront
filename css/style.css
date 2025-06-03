@@ -1,3 +1,4 @@
+/* Tipografia e Cores Básicas */
 body {
     font-family: 'Lora', serif;
     background-color: #FAFAFA;
@@ -12,6 +13,7 @@ h1, h2 {
     margin-top: 1.5em;
 }
 
+/* Links */
 a {
     color: #A8B5A2;
     text-decoration: none;
@@ -22,38 +24,100 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+/* Navegação */
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     font-weight: bold;
+    font-size: 0.95em;
 }
 
+/* Rodapé */
 footer {
     margin-top: 3em;
     padding: 1em;
     text-align: center;
     font-size: 0.85em;
     color: #777;
+    background-color: #f0f0f0;
 }
 
+/* Conteúdo Principal */
 main {
     max-width: 900px;
     margin: 0 auto;
     padding: 2em;
 }
 
-.produtos-lista {
+/* Seção de Apresentação */
+.apresentacao {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+/* Título dos Destaques */
+.destaques h2 {
+    margin-bottom: 1em;
+}
+
+/* Lista de Produtos */
+.produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
 }
 
+/* Cada Produto */
+.produto {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
 .produto img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 0.5em;
+}
+
+.produto p {
+    margin: 0;
+    font-weight: bold;
+    color: #5E726A;
+    font-size: 1em;
 }
