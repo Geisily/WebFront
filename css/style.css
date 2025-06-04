@@ -9,7 +9,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #A8B5A2;
+    color: #5E726A;
     margin-top: 1.5em;
 }
 
@@ -20,7 +20,7 @@ h3 {
 
 /* Links */
 a {
-    color: #A8B5A2;
+    color: #5E726A;
     text-decoration: none;
 }
 
@@ -56,6 +56,7 @@ nav ul {
 nav ul li a {
     font-weight: bold;
     font-size: 0.95em;
+    font-family: 'Lora', serif; /* Adicione esta linha para garantir a fonte */
 }
 
 /* Rodapé */
@@ -82,49 +83,142 @@ main {
 }
 
 /* Título da seção de produtos */
-.produtos-container h2,
-.produtos-container h1 {
+.produtos-container h2 {
     text-align: center;
     margin-bottom: 1.5em;
+    color: #5E726A;
 }
 
 /* Grade de produtos */
 .produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2em;
+    row-gap: 3em; /* aumenta o espaço vertical entre os produtos */
 }
+
 
 /* Estilo individual de produto */
 .produto {
     background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 1em;
+    border-radius: 12px;
+    padding: 1.2em;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    position: relative;
+    margin-bottom: 2em; /* espaçamento entre os cards */
 }
 
+/* Linha separadora entre produtos */
+.produto::after {
+    content: "";
+    position: absolute;
+    bottom: -1em;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+
 .produto:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .produto img {
     width: 100%;
-    height: 250px;
+    max-height: 250px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+
+.produto h3 {
+    font-size: 1.1em;
+    color: #5E726A;
     margin-bottom: 0.5em;
 }
 
 .produto p {
-    margin: 0;
-    font-weight: normal;
-    color: #5E726A;
     font-size: 0.95em;
+    color: #5E726A;
+    margin: 0;
 }
+
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nome-marca {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #5E726A;
+}
+.contato {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 4rem; /* top/bottom = 2rem, left/right = 2rem */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.contato h1 {
+    text-align: center;
+    color: #5E726A;
+    margin-bottom: 1em;
+}
+
+.contato p {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #5E726A; /* verde */
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #c2678c; /* rosa */
+}
+
