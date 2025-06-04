@@ -7,16 +7,24 @@ body {
     padding: 0;
 }
 
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     color: #5E726A;
     margin-top: 1.5em;
 }
 
-h3 {
-    font-size: 1.1em;
-    margin: 0.5em 0;
-}
 
 /* Links */
 a {
@@ -37,6 +45,7 @@ header {
     padding: 20px 40px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
 }
 
 .logo {
@@ -56,7 +65,7 @@ nav ul {
 nav ul li a {
     font-weight: bold;
     font-size: 0.95em;
-    font-family: 'Lora', serif; /* Adicione esta linha para garantir a fonte */
+    font-family: 'Lora', serif; 
 }
 
 /* Rodapé */
@@ -80,6 +89,7 @@ main {
 .apresentacao {
     text-align: center;
     margin-bottom: 3em;
+    font-size: 1.3em;
 }
 
 /* Título da seção de produtos */
@@ -94,7 +104,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
-    row-gap: 3em; /* aumenta o espaço vertical entre os produtos */
+    row-gap: 3em;
 }
 
 
@@ -102,7 +112,7 @@ main {
 .produto {
     background-color: #fff;
     border-radius: 12px;
-    padding: 1.2em;
+    padding: 1em;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
@@ -111,7 +121,7 @@ main {
     justify-content: space-between;
     height: 100%;
     position: relative;
-    margin-bottom: 2em; /* espaçamento entre os cards */
+    margin-bottom: 2em;
 }
 
 /* Linha separadora entre produtos */
@@ -135,23 +145,21 @@ main {
     max-height: 250px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 1em;
+    margin-bottom: 0.3em;
 }
-
 
 .produto h3 {
     font-size: 1.1em;
     color: #5E726A;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
 }
 
 .produto p {
     font-size: 0.95em;
     color: #5E726A;
-    margin: 0;
+    margin-top: 0.2em; 
+    margin-bottom: 0; 
 }
-
-
 
 .logo-container {
     display: flex;
@@ -168,10 +176,11 @@ main {
 .contato {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 4rem; /* top/bottom = 2rem, left/right = 2rem */
+  padding: 4rem 4rem;
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2em;
 }
 
 
@@ -208,7 +217,7 @@ form textarea {
 }
 
 form button {
-    background-color: #5E726A; /* verde */
+    background-color: #5E726A;
     color: white;
     border: none;
     padding: 0.8em 1.5em;
@@ -219,6 +228,5 @@ form button {
 }
 
 form button:hover {
-    background-color: #c2678c; /* rosa */
+    background-color: #c2678c;
 }
-
